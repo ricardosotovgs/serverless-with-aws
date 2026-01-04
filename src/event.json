@@ -1,3 +1,9 @@
 {
-  "message": "hello"
+  "id": "12345678-1234-1234-1234-123456789012",
+  "type": {
+    "detail-type": "Scheduled Event",
+    "source": "aws.events"
+  },
+  "locations": ["us-west-1", "us-east-1"],
+  "detail": {}
 }
