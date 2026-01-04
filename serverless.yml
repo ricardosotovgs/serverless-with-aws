@@ -2,17 +2,16 @@ service: serverless
 
 provider:
   name: aws
-  runtime: nodejs8.10
-  profile: femasters
+  runtime: nodejs22.x
+  profile: ricardo-soto-learning
   region: us-west-1
   stage: dev
 
+functions:
+  hello:
+    handler: src/helloworld.handler
+  firstTask:
+    handler: src/helloworld.firstTask
+
 plugins:
   - serverless-offline
-
-functions:
-  api:
-    handler: src/api/index.handler
-    events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
